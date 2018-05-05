@@ -11,7 +11,7 @@ dataset = pd.read_csv('Data.csv')
 # create a matrix of features 
 # 
 X = dataset.iloc[:, :-1].values
-# matrix of independent variables 
+# matrix of dependent variables 
 y = dataset.iloc[:, 3].values
 
 # taking care of missing data 
@@ -29,3 +29,6 @@ X[:, 0] = labelEncoder_X.fit_transform(X[:, 0])
 # witch colunm need to be catrgory
 oneHotEncoder = OneHotEncoder(categorical_features = [0])
 X = oneHotEncoder.fit_transform(X).toarray()
+
+labelEncoder_y = LabelEncoder()
+y = labelEncoder_y.fit_transform(y)
