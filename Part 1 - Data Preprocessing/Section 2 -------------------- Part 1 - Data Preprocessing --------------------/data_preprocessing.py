@@ -9,3 +9,6 @@ import pandas as pd
 dataset = pd.read_csv('Data.csv')
 
 # create a matrix of features 
+# 
+X = dataset.iloc[:, :-1].values
+# matrix of independent variables 
