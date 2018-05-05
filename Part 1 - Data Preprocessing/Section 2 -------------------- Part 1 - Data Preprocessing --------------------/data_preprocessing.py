@@ -20,3 +20,12 @@ imputer = Imputer(missing_values = 'NaN', strategy= 'mean', axis = 0)
 imputer = imputer.fit(X[:,1:3])
 # replace the missing data
 X[:, 1:3] = imputer.transform(X[:, 1:3])
+
+
+# encoding catrgorical data
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+labelEncoder_X = LabelEncoder()
+X[:, 0] = labelEncoder_X.fit_transform(X[:, 0])
+# witch colunm need to be catrgory
+oneHotEncoder = OneHotEncoder(categorical_features = [0])
+X = oneHotEncoder.fit_transform(X).toarray()
