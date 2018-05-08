@@ -28,4 +28,10 @@ sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train) 
 X_test = sc_X.transform(X_test)"""
 
-from skl
+# fitting simple linear regression to the traing set
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
+regressor.fit(X_train, y_train)
+
+# predict the test set result 
+y_pred = regressor.predict(X_test)
