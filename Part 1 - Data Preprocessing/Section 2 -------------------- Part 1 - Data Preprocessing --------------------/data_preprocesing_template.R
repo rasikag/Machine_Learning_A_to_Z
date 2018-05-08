@@ -1,9 +1,12 @@
 # Import the dataset 
 dataset = read.csv('Data.csv')
+
+# Create subset of data set 
+#dataset = dataset[, 2:3]
+
 # Splitting the dataset into the Training set and Test set
 
 #install.packages('caTools')
-
 library(caTools)
 set.seed(123)
 split = sample.split(dataset$Purchased, SplitRatio = 0.8)
