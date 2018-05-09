@@ -24,6 +24,6 @@ regressor = lm(formula = Salary ~ YearsExperience,
                data = training_set)
 
 # summary(regressor)
-
+y_pred = predict(regressor, newdata = test_set)
 
 
