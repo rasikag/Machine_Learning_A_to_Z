@@ -12,9 +12,9 @@ X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 1].values
 
 # taking care of missing data 
-from sklearn.preprocessing import Imputer
+"""from sklearn.preprocessing import Imputer
 imputer = Imputer(missing_values = 'NaN', strategy= 'mean', axis = 0)
-imputer = imputer.fit(X[:,1:3])
+imputer = imputer.fit(X[:,1:3])"""
 
 
 
