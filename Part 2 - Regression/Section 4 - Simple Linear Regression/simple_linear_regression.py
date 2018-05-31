@@ -35,7 +35,7 @@ regressor.fit(X_train, y_train)
 
 # predict the test set result 
 y_pred = regressor.predict(X_test)
-
+￼
 # visualize the training set result 
 plt.scatter(X_train, y_train, color = 'red')
 plt.plot(X_train, regressor.predict(X_train), color = 'blue')
